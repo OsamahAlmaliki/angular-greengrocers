@@ -1,0 +1,24 @@
+.groceries-container {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-gap: 20px;
+  justify-content: center;
+  place-items: center;
+}
+
+.item-details {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.icon-img {
+  width: 100%;
+  height: auto;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

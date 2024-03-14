@@ -1,0 +1,21 @@
+<section id="store">
+  <div class="groceries-container">
+    <div *ngFor="let item of filteredItems" class="grocery-item">
+      <img
+        [src]="'assets/icons/' + item.id + '.svg'"
+        alt="{{ item.name }} icon"
+        class="icon-img"
+      />
+      <div class="item-details">
+        <button (click)="addToCart(item)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="filter-buttons">
+    <button (click)="filterByType('fruit')">Filter by Fruit</button>
+    <button (click)="filterByType('vegetable')">Filter by Vegetable</button>
+    <button (click)="sortByPrice()">Sort by Price</button>
+    <button (click)="sortByName()">Sort by Name</button>
+    <button (click)="resetFilters()">Reset Filter</button>
+  </div>
+</section>

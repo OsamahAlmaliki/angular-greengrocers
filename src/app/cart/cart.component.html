@@ -1,0 +1,33 @@
+<div>
+  <div class="app-cart">
+    <ul class="cart--item-list">
+      <ng-container *ngFor="let item of cart">
+        <li *ngIf="item.quantity > 0" class="cart--item">
+          <img
+            [src]="'assets/icons/' + item.id + '.svg'"
+            alt="{{ item.name }} icon"
+            class="cart--item-icon"
+          />
+          <div class="item-details">
+            <span>{{ item.name }}</span>
+            <div class="quantity-controls">
+              <button
+                class="quantity-btn remove-btn"
+                (click)="decreaseQuantity(item)"
+              >
+                -
+              </button>
+              <span class="quantity-text">{{ item.quantity }}</span>
+              <button
+                class="quantity-btn add-btn"
+                (click)="increaseQuantity(item)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</div>
